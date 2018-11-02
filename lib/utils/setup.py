@@ -6,9 +6,10 @@ try:
     numpy_include = np.get_include()
 except AttributeError:
     numpy_include = np.get_numpy_include()
-
+    
+    
 setup(
-ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"])
+ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"],include_dirs=[numpy.get_include()])
 )
 # from Cython.Build import cythonize
 # import os
