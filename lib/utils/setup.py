@@ -9,8 +9,7 @@ except AttributeError:
     
     
 setup(
-ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"],include_dirs=[np.get_include()])
-)
+ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"]),)
 # from Cython.Build import cythonize
 # import os
 # from os.path import join as pjoin
