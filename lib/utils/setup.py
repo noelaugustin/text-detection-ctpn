@@ -3,13 +3,13 @@ import numpy as np
 from distutils.core import setup
 
 try:
-    numpy_include = np.get_include()
+numpy_include = np.get_include()
 except AttributeError:
-    numpy_include = np.get_numpy_include()
-    
-    
+numpy_include = np.get_numpy_include()
+
 setup(
-ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"]),)
+ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"],include_dirs=[numpy_include]),
+)
 # from Cython.Build import cythonize
 # import os
 # from os.path import join as pjoin
