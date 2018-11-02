@@ -9,7 +9,7 @@ except AttributeError:
     
     
 setup(
-ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"],include_dirs=[numpy.get_include()])
+ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"],include_dirs=[np.get_include()])
 )
 # from Cython.Build import cythonize
 # import os
